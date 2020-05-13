@@ -1,0 +1,20 @@
+import requests
+import urllib.request
+import time
+from bs4 import BeautifulSoup
+import numpy as np
+import pandas as pd
+from urllib.request import urlopen
+url = 'https://en.wikipedia.org/wiki/List_of_cities_and_counties_in_Virginia'
+html = urlopen(url)
+soup = BeautifulSoup(html,'html.parser')
+tables = soup.find_all('table')
+counties = []
+for table in tables: 
+  rows = table.find_all('tr')
+  for row in rows:
+    cells = row.find_all('td')
+    if len(cells)>1:
+      county = cells[0]
+      counties.append(county)
+s = pd.Series(counties)
