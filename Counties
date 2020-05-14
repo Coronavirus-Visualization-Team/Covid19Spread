@@ -8,6 +8,7 @@ from urllib.request import urlopen
 url = 'https://en.wikipedia.org/wiki/List_of_cities_and_counties_in_Virginia'
 html = urlopen(url)
 soup = BeautifulSoup(html,'html.parser')
+print soup.prettify()
 tables = soup.find('table')
 counties = []
 rows = table.find_all('tr')
