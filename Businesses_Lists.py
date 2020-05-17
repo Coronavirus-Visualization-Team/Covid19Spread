@@ -15,8 +15,7 @@ page = requests.get(url)
 #turn HTTP get request into JSON file
 content = page.content
 output = json.loads(content)
-print(content)
 
-#output all business names and their operational status
+#output all business names and their operational status 
 for i in range(len(output['results'])):
     print(output['results'][i]['name'],output['results'][i]['business_status'])
