@@ -1,0 +1,24 @@
+# get place_id from location
+
+import requests
+from urllib.parse import urlencode
+
+def search_place(gps, api_key):
+    # Send request by API
+    response = requests.get(
+        'https://maps.googleapis.com/maps/api/place/nearbysearch/json?' + urlencode(
+            {'location': gps, 'rankby': 'distance', 'name': 'franprix', 'key': api_key}))
+    # Read response as json
+    resp_address = response.json()
+    # status=OK: the place was successfully detected and at least one result was returned
+    if resp_address['status'] == 'OK':
+        lat = resp_address['results'][0]['geometry']['location']['lat']
+        lng = resp_address['results'][0]['geometry']['location']['lng']
+        vicinity_addr = resp_address['results'][0]['vicinity']
+        place_id = resp_address['results'][0]['place_id']
+        glb_rating = resp_address['results'][0]['rating']
+        totnb_reviews = resp_address['results'][0]['user_ratings_total']
+        return [lat, lng, vicinity_addr, place_id, glb_rating, totnb_reviews]
+    else:
+        print('Failed to get json response:', resp_address)
+        return ['place_id is not found', gps]
