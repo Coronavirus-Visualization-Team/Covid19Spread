@@ -4,7 +4,6 @@ import json
 import csv
 from urllib.parse import urlencode
 
-api_key = AIzaSyBfKiv4bXLC9Qbebjyj2MFfGU3DzHKYPkY
 path = "C:\Users\Maya Chande\Downloads\Businesses_Output.csv"
 
 def get_coords(path):
@@ -24,7 +23,7 @@ def get_coords(path):
         coords[i] = (lats[i],longs[i])
     return coords
     
-def get_place_id(coords):
+def get_place_id(coords, api_key):
     ids = []
     for i in range(len(coords)):
         response = requests.get(
@@ -35,7 +34,7 @@ def get_place_id(coords):
         ids.append(place_id)
     return ids
     
-def get_reviews(ids):
+def get_reviews(ids, api_key):
     for i in range(len(ids)):
         place_id = ids[i]
         response = requests.get('https://maps.googleapis.com/maps/api/place/details/json?' + urlencode({'place_id': place_id, 'key': api_key}))
