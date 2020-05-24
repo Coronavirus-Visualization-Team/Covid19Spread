@@ -1,0 +1,36 @@
+import pandas
+import requests
+from urllib.parse import urlencode
+def get_placeids(path):
+    try:
+        df = pd.read_csv(path)
+        pi = []
+        for i in range(df.index.size):
+            pi.append(df.loc[i].values[2])
+    except:
+        print(path)
+        print("Error opening file")
+        exit(0)
+    
+    return [pi, df.index.size]
+    
+def get_place_details(pi, api_key):
+    # Send request by API
+    for in in range(len(pi)):
+      response = requests.get('https://maps.googleapis.com/maps/api/place/details/json?' + urlencode({'place_id': place_id, 'key': api_key}))
+    # Read response as json
+    resp_details = response.json()
+    # status=OK: the place was successfully detected and at least one result was returned
+    for i in range(len(resp_details)):
+      if resp_details['status'] == 'OK':
+        for x in range(len(resp_details)):
+            review_rating = resp_details['result']['reviews'][x]['rating']
+            review_timestamp = resp_details['result']['reviews'][x]['time']
+            review_text = resp_details['result']['reviews'][x]['text']
+            series = {'PlaceID': placeid, 'ReviewTimestamp': review_timestamp, 'ReviewRating':review_rating, 'ReviewText': review_text}
+            frame = frame.append(series, ignore_index = True)
+    return frame
+      else:
+        print('Failed to get json response:', resp_details)
+        return ['Review is not found', place_id]
+        
