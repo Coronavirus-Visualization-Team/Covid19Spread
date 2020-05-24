@@ -40,7 +40,7 @@ def main(path, key, frame, places_types, state):
                     lat = nums.get('lat')
                     lng = nums. get('lng')   
                     name = info['results'][i]['name']
-                    placeid = info['results'][i][place_id']
+                    placeid = info['results'][i]['place_id']
                     searchTag = places_types[y]
                     series = {'PlaceId': placeid, 'State':state, 'County':counties_info[0][x],'Business Name':name, 'Search Tag': searchTag, 'Latitude': lat, 'Longitude': lng}
                     frame = frame.append(series, ignore_index = True)
