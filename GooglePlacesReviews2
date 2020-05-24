@@ -1,36 +1,56 @@
-import pandas
+import pandas as pd
 import requests
-from urllib.parse import urlencode
-def get_placeids(path):
-    try:
-        df = pd.read_csv(path)
-        pi = []
-        for i in range(df.index.size):
-            pi.append(df.loc[i].values[2])
-    except:
-        print(path)
-        print("Error opening file")
-        exit(0)
+import json
+
+def search_location(name, key, lat, long):
+    print("request","name: ", name, "Latitude: ", lat, "Longitude: ", long)
+    url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location={}&radius={}&keyword={}&key={}'.format(str(lat) + "," + str(long), 5, name, key)
+    page = requests.get(url) #gets webpage using api request converted into json
+    content = page.content
+    output = json.loads(content)
+    return output 
+
+def get_business_reviews(place_id, key):
+    print("request", "place_id ", place_id)
+    url = "https://maps.googleapis.com/maps/api/place/details/json?place_id={}&key={}".format(place_id, key)
+    page = requests.get(url)
+    content = page.content
+    output = json.loads(content)
+    return output
     
-    return [pi, df.index.size]
+try:
+    df = pd.read_csv(r"C:\Users\Maya Chande\Downloads\BusOut2.csv") #loads csv of compiled businesses
+except IOError:
+    print("Error Opening File")
+    exit(0)
     
-def get_place_details(pi, api_key):
-    # Send request by API
-    for in in range(len(pi)):
-      response = requests.get('https://maps.googleapis.com/maps/api/place/details/json?' + urlencode({'place_id': place_id, 'key': api_key}))
-    # Read response as json
-    resp_details = response.json()
-    # status=OK: the place was successfully detected and at least one result was returned
-    for i in range(len(resp_details)):
-      if resp_details['status'] == 'OK':
-        for x in range(len(resp_details)):
-            review_rating = resp_details['result']['reviews'][x]['rating']
-            review_timestamp = resp_details['result']['reviews'][x]['time']
-            review_text = resp_details['result']['reviews'][x]['text']
-            series = {'PlaceID': placeid, 'ReviewTimestamp': review_timestamp, 'ReviewRating':review_rating, 'ReviewText': review_text}
-            frame = frame.append(series, ignore_index = True)
-    return frame
-      else:
-        print('Failed to get json response:', resp_details)
-        return ['Review is not found', place_id]
+listFormattedID = [] #correct ID corresponding to review
+listNames = []
+listLat = []
+listLong = []
+listReview = []
+listID = []
+listJSON = []
+for i in range(len(df.index)):
+    listID.append(df["ID"][i])
+    listNames.append(df["Business Name"][i])
+    listLat.append(df["Latitude"][i])
+    listLong.append(df["Longitude"][i])
+for i in range(len(listNames)):
+    info = (search_location(listNames[i], key, listLat[i], listLong[i])) 
+    for j in range(len(info["results"])):
+        moreInfo = get_business_reviews(info["results"][j]["place_id"], key)
+        listJSON.append(moreInfo) #puts all the review json files into a list
+for i in range(len(listJSON)):
+    info = listJSON[i] #iterates through every compiled review json file
+    ID = listID[i] #index of the json file of reviews corresponds with the ID of the place
+    for j in range(len(info["result"]["reviews"])):
+        review = info["result"]["reviews"][j]["text"]
+        if(not review == ""): #omits all the empty text
+            listReview.append(review)
+            listFormattedID.append(ID)
+finalFormat = {"Business ID": listFormattedID, "Reviews": listReview}
+df2 = pd.DataFrame(finalFormat)
+df2.to_csv("collective_business_reviews.csv", index = False)
+
         
