@@ -36,7 +36,7 @@ for i in range(len(df.index)):
     listNames.append(df["Business Name"][i])
     listLat.append(df["Latitude"][i])
     listLong.append(df["Longitude"][i])
-    
+
 for i in range(len(listNames)):
     info = (search_location(listNames[i], key, listLat[i], listLong[i])) 
     for j in range(len(info["results"])):
