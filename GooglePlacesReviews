@@ -1,48 +1,42 @@
-# get place_id from location
 import requests
-import json
-import csv
 from urllib.parse import urlencode
 
-path = "C:\Users\Maya Chande\Downloads\Businesses_Output.csv"
-
-def get_coords(path):
-    try:
-        df = pd.read_csv(path)
-        lats = []
-        longs = []
-        for i in range(df.index.size):
-            coords.append(df.loc[i].values[4])
-            coords.append(df.loc[i].values[5])
-    except:
-        print(path)
-        print("Error opening file")
-        exit(0)
-    coords = []
-    for i in range(len(lats)):
-        coords[i] = (lats[i],longs[i])
-    return coords
-    
-def get_place_id(coords, api_key):
-    ids = []
-    for i in range(len(coords)):
-        response = requests.get(
-        'https://maps.googleapis.com/maps/api/place/nearbysearch/json?' + urlencode({'location': coords[i], 'rankby': 'distance', 'name': 'franprix', 'key': api_key}))
-        content = response.content
-        output = json.loads(content)
-        place_id = output['results'][0]['place_id']
-        ids.append(place_id)
-    return ids
-    
-def get_reviews(ids, api_key):
-    for i in range(len(ids)):
-        place_id = ids[i]
-        response = requests.get('https://maps.googleapis.com/maps/api/place/details/json?' + urlencode({'place_id': place_id, 'key': api_key}))
-        content = response.content
-        output = json.loads(content)
-        review_timestamp = output['result']['reviews'][i]['time']
-        review_rating = output['result']['reviews'][i]['rating']
-        review_text = output['result']['reviews'][i]['text']
-    return [place_id, review_timestamp, review_rating, review_text]
+def search_place(gps, api_key):
+    # Send request by API
+    response = requests.get(
+        'https://maps.googleapis.com/maps/api/place/nearbysearch/json?' + urlencode(
+            {'location': gps, 'rankby': 'distance', 'name': 'franprix', 'key': api_key}))
+    # Read response as json
+    resp_address = response.json()
+    # status=OK: the place was successfully detected and at least one result was returned
+    if resp_address['status'] == 'OK':
+        lat = resp_address['results'][0]['geometry']['location']['lat']
+        lng = resp_address['results'][0]['geometry']['location']['lng']
+        vicinity_addr = resp_address['results'][0]['vicinity']
+        place_id = resp_address['results'][0]['place_id']
+        glb_rating = resp_address['results'][0]['rating']
+        totnb_reviews = resp_address['results'][0]['user_ratings_total']
+        return place_id
+    else:
+        print('Failed to get json response:', resp_address)
+        return ['place_id is not found', gps]
         
-    
+def get_place_details(gps, api_key):
+    # Send request by API
+    place_id = search_place(gps, api_key)
+    response = requests.get(
+        'https://maps.googleapis.com/maps/api/place/details/json?' + urlencode({'place_id': place_id, 'key': api_key}))
+    # Read response as json
+    resp_details = response.json()
+    # status=OK: the place was successfully detected and at least one result was returned
+    for i in range(len(resp_details)):
+
+    if resp_details['status'] == 'OK':
+        for i in range(len(resp_details)):
+            review_rating = resp_details['result']['reviews'][i]['rating']
+            review_timestamp = resp_details['result']['reviews'][i]['time']
+            review_text = resp_details['result']['reviews'][i]['text']
+            return [place_id, review_rating, review_timestamp, review_text]
+    else:
+        print('Failed to get json response:', resp_details)
+        return ['Review is not found', place_id]
