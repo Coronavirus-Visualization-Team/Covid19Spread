@@ -29,37 +29,36 @@ def get_business_reviews(place_id, key):
     return output
 
 try:
-    df = pd.read_csv(path) #loads csv of compiled counties
-    listFormattedID = [] #correct ID corresponding to review
-    listNames = []
-    listLat = []
-    listLong = []
-    listReview = []
-    listID = []
-    listJSON = []
-    for i in range(len(df.index)):
-        listID.append(df["ID"][i])
-        listNames.append(df["Business Name"][i])
-        listLat.append(df["Latitude"][i])
-        listLong.append(df["Longitude"][i])
-    for i in range(len(listNames)):
-        info = (search_location(listNames[i], key, listLat[i], listLong[i])) 
-        for j in range(len(info["results"])):
-            moreInfo = get_business_reviews(info["results"][j]["place_id"], key)
-            listJSON.append(moreInfo) #puts all the review json files into a list
-    for i in range(len(listJSON)):
-        info = listJSON[i] #iterates through every compiled review json file
-        ID = listID[i] #index of the json file of reviews corresponds with the ID of the place
-        for j in range(len(info["result"]["reviews"])):
-            review = info["result"]["reviews"][j]["text"]
-            if(not review == ""): #omits all the empty text
-                listReview.append(review)
-                listFormattedID.append(ID)
-    finalFormat = {"Business ID": listFormattedID, "Reviews": listReview}
-    df2 = pd.DataFrame(finalFormat)
-    df2.to_csv("collective_business_reviews.csv", index = False)
+    df = pd.read_csv(path) #loads csv of compiled businesses
 except IOError:
     print("Error Opening File")
     exit(0)
-
-
+    
+listFormattedID = [] #correct ID corresponding to review
+listNames = []
+listLat = []
+listLong = []
+listReview = []
+listID = []
+listJSON = []
+for i in range(len(df.index)):
+    listID.append(df["ID"][i])
+    listNames.append(df["Business Name"][i])
+    listLat.append(df["Latitude"][i])
+    listLong.append(df["Longitude"][i])
+for i in range(len(listNames)):
+    info = (search_location(listNames[i], key, listLat[i], listLong[i])) 
+    for j in range(len(info["results"])):
+        moreInfo = get_business_reviews(info["results"][j]["place_id"], key)
+        listJSON.append(moreInfo) #puts all the review json files into a list
+for i in range(len(listJSON)):
+    info = listJSON[i] #iterates through every compiled review json file
+    ID = listID[i] #index of the json file of reviews corresponds with the ID of the place
+    for j in range(len(info["result"]["reviews"])):
+        review = info["result"]["reviews"][j]["text"]
+        if(not review == ""): #omits all the empty text
+            listReview.append(review)
+            listFormattedID.append(ID)
+finalFormat = {"Business ID": listFormattedID, "Reviews": listReview}
+df2 = pd.DataFrame(finalFormat)
+df2.to_csv("collective_business_reviews.csv", index = False)
