@@ -8,10 +8,8 @@ def google_requests(place, place_type, key):
     print("request","place:",place,"Place Type:", place_type)
     #customer URL to get info from google places api with specified search perameters
     url = 'https://maps.googleapis.com/maps/api/place/textsearch/json?query={}+in+{}&key={}'.format(place_type, place, key)
-
     #HTTP get requests on customer URL
     page = requests.get(url)
-
     #turn HTTP get request into JSON file
     content = page.content
     output = json.loads(content)
@@ -32,7 +30,6 @@ def get_counties(path):
     return [ls, df.index.size]
 
 def main(path, key, frame, places_types, state):
-   
     #try:
     counties_info = get_counties(path)
     for x in range(counties_info[1]):
