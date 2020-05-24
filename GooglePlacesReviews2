@@ -18,6 +18,7 @@ def get_business_reviews(place_id, key):
     output = json.loads(content)
     return output
     
+    
 try:
     df = pd.read_csv(r"C:\Users\Maya Chande\Downloads\BusOut2.csv") #loads csv of compiled businesses
 except IOError:
