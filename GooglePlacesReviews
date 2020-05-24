@@ -1,6 +1,5 @@
 import requests
-from urllib.parse 
-import urlencode
+from urllib.parse import urlencode
 
 def search_place(gps, api_key):
     # Send request by API
@@ -24,7 +23,7 @@ def search_place(gps, api_key):
         
 def get_place_details(gps, api_key):
     # Send request by API
-    place_id = search_places(gps, api_key)
+    place_id = search_place(gps, api_key)
     response = requests.get(
         'https://maps.googleapis.com/maps/api/place/details/json?' + urlencode({'place_id': place_id, 'key': api_key}))
     # Read response as json
