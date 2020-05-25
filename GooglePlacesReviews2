@@ -46,9 +46,10 @@ for i in range(len(listNames)):
 for i in range(len(listJSON)):
     info = listJSON[i] #iterates through every compiled review json file
     ID = listID[i] #index of the json file of reviews corresponds with the ID of the place
-    for j in range(len(info["result"]["reviews"])):
-        review = info["result"]["reviews"][j]["text"]
-        if(not review == ""): #omits all the empty text
+    if("reviews" in info["result"].keys()):
+        for j in range(len(info["result"]["reviews"])):
+            review = info["result"]["reviews"][j]["text"]
+            if(not review == ""): #omits all the empty text
             listReview.append(review)
             listFormattedID.append(ID)
 
