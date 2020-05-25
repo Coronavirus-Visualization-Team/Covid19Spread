@@ -54,11 +54,14 @@ for i in range(len(listNames)):
 for i in range(len(listJSON)):
     info = listJSON[i] #iterates through every compiled review json file
     ID = listID[i] #index of the json file of reviews corresponds with the ID of the place
-    for j in range(len(info["result"]["reviews"])):
-        review = info["result"]["reviews"][j]["text"]
-        if(not review == ""): #omits all the empty text
-            listReview.append(review)
-            listFormattedID.append(ID)
+    if("reviews" in info["result"].keys()): #if no reviews have been made, then don't execute anything
+        for j in range(len(info["result"]["reviews"])):
+            review = info["result"]["reviews"][j]["text"]
+            if(not review == ""): #omits all the empty text
+                listReview.append(review)
+                listFormattedID.append(ID)
 finalFormat = {"Business ID": listFormattedID, "Reviews": listReview}
 df2 = pd.DataFrame(finalFormat)
 df2.to_csv("collective_business_reviews.csv", index = False)
+
+
