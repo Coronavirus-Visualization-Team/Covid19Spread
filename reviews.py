@@ -13,7 +13,7 @@ headers = {'Authorization': 'bearer %s' % apiKey}
 file = pd.read_csv("Businesses_Output.csv", encoding="utf-8")
 
 # Slicing the dataframe to start at a different index
-file = file[:25]
+file = file[3943:]
 
 #sets up fields for reviews csv
 fields = ['ID', 'Review']
@@ -24,6 +24,9 @@ retDF = pd.DataFrame(columns=['id', 'reviews'])
 # Note: It can scrape at max 2500 businesses at a time (rate limit 5000/day)
 for index, row in file.iterrows():
     search = requests.get('https://api.yelp.com/v3/businesses/search?term=' + row['Business Name'] + '&latitude=' + str(row['Latitude']) + '&longitude=' + str(row['Longitude']), headers=headers).json()
+    print(search)
+    print(index)
+    # Sometimes gives key error (Ignore and run again with most recent index)
     for business in search['businesses']:
         if row['Business Name'] == business['name'] and abs(row['Latitude'] - business['coordinates']['latitude']) < 0.001 and abs(row['Longitude'] == business['coordinates']['longitude']) < 0.001:
             businessID = business['id']

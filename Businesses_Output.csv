@@ -428,7 +428,7 @@ ID,,State,County,Business Name,Search Tag,Latitude,Longitude
 426,,Maryland,Baltimore,Rosedale Auto Service,car repair,39.3412751,-76.5475967
 427,,Maryland,Baltimore,"Goodwill Industries of the Chesapeake, Inc.",retail stores,39.2831681,-76.5930338
 428,,Maryland,Baltimore,Verizon Authorized Retailer – TCC,retail stores,39.3597942,-76.5884775
-429,,Maryland,Baltimore,Swarovski Retail Ventures #152,retail stores,39.286213,-76.6106949
+429,,Maryland,Baltimore,Swarovski Retail Ventures 152,retail stores,39.286213,-76.6106949
 430,,Maryland,Baltimore,"Baltimore Sports Store-Local Sports Apparel Shop, Retail Sports Store, Custom Screen Printing Shop",retail stores,39.3989318,-76.5685934
 431,,Maryland,Baltimore,Wardrobe Wizard of Baltimore,retail stores,39.3101938,-76.6180978
 432,,Maryland,Baltimore,Verizon Authorized Retailer – Victra,retail stores,39.2692027,-76.5991971
@@ -590,7 +590,7 @@ ID,,State,County,Business Name,Search Tag,Latitude,Longitude
 588,,Maryland,Baltimore City,Marshalls,retail stores,39.2871245,-76.6073616
 589,,Maryland,Baltimore City,"Baltimore Sports Store-Local Sports Apparel Shop, Retail Sports Store, Custom Screen Printing Shop",retail stores,39.3989318,-76.5685934
 590,,Maryland,Baltimore City,Target,retail stores,39.2747687,-76.5661563
-591,,Maryland,Baltimore City,Swarovski Retail Ventures #152,retail stores,39.286213,-76.6106949
+591,,Maryland,Baltimore City,Swarovski Retail Ventures 152,retail stores,39.286213,-76.6106949
 592,,Maryland,Baltimore City,Verizon Authorized Retailer – TCC,retail stores,39.3597942,-76.5884775
 593,,Maryland,Baltimore City,Rainbow Shops,retail stores,39.2913023,-76.6205663
 594,,Maryland,Baltimore City,Rainbow Shops,retail stores,39.3171043,-76.6555132
@@ -767,7 +767,7 @@ ID,,State,County,Business Name,Search Tag,Latitude,Longitude
 765,,Maryland,Calvert,Barefoot Wellness,gyms,38.5376753,-76.5817265
 766,,Maryland,Calvert,Trident CrossFit,gyms,38.830301,-77.052568
 767,,Maryland,Caroline,The Wooden Keg Tavern,Entertainment,40.7137854,-76.1831232
-768,,Maryland,Caroline,7C Lounge at FOP Lodge #5,Entertainment,40.0989833,-75.0034389
+768,,Maryland,Caroline,7C Lounge at FOP Lodge 5,Entertainment,40.0989833,-75.0034389
 769,,Maryland,Caroline,Carolines on Broadway,Entertainment,40.7609949,-73.9840449
 770,,Maryland,Caroline,Caroline's By The Bay,Entertainment,39.3182012,-74.5874721
 771,,Maryland,Caroline,HandleBar Cafe andand Bike Shop,Entertainment,39.285084,-76.5964769
@@ -2343,7 +2343,7 @@ ID,,State,County,Business Name,Search Tag,Latitude,Longitude
 2341,,Maryland,Montgomery,Doctor Long,Hospitals,32.3785888,-86.1715598
 2342,,Maryland,Montgomery,Montgomery Cardiovascular Associates- Winton M. Blount Loop,Hospitals,32.3779804,-86.1721444
 2343,,Maryland,Montgomery,BMCE,Hospitals,32.3279556,-86.2777512
-2344,,Maryland,Montgomery,Fire Station #3,Hospitals,32.3565168,-86.2418099
+2344,,Maryland,Montgomery,Fire Station 3,Hospitals,32.3565168,-86.2418099
 2345,,Maryland,Montgomery,VA Medical Center-Montgomery,Hospitals,32.3773329,-86.2462271
 2346,,Maryland,Montgomery,Prattville Baptist Hospital,Hospitals,32.4639954,-86.451837
 2347,,Maryland,Montgomery,Your Doctor's office PC,Doctors offices,32.338191,-86.149358
@@ -4364,7 +4364,7 @@ ID,,State,County,Business Name,Search Tag,Latitude,Longitude
 4362,,Washington D.C.,Pleasant Plains,Clayville Town Historic Site,Entertainment,39.8666916,-89.8971252
 4363,,Washington D.C.,Pleasant Plains,Prairie Skies Public Library,Entertainment,39.8781151,-89.9232006
 4364,,Washington D.C.,Pleasant Plains,Pleasant Plains Church,Entertainment,39.875819,-89.9187085
-4365,,Washington D.C.,Pleasant Plains,Pleasant Plains CUSD #8 - High School,Entertainment,39.8769,-89.9188546
+4365,,Washington D.C.,Pleasant Plains,Pleasant Plains CUSD 8 - High School,Entertainment,39.8769,-89.9188546
 4366,,Washington D.C.,Pleasant Plains,Inclusion City Shops,Entertainment,39.8754288,-89.9157064
 4367,,Washington D.C.,Pleasant Plains,Casey's,Entertainment,39.8767615,-89.9232809
 4368,,Washington D.C.,Pleasant Plains,Pleasant Plains City Hall,Entertainment,39.8755847,-89.922166
@@ -6745,7 +6745,7 @@ ID,,State,County,Business Name,Search Tag,Latitude,Longitude
 6743,,Washington D.C.,Chevy Chase,Playground,Parks,38.9748856,-77.095535
 6744,,Washington D.C.,Chevy Chase,Zimmerman Park,Parks,38.9875927,-77.0829337
 6745,,Washington D.C.,Chevy Chase,Ray’s Meadow Local Park,Parks,38.9944394,-77.0617317
-6746,,Washington D.C.,Chevy Chase,"Meadowbrook - Softball Fields #4, 5, and 6",Parks,38.986028,-77.0601196
+6746,,Washington D.C.,Chevy Chase,"Meadowbrook - Softball Fields 4, 5, and 6",Parks,38.986028,-77.0601196
 6747,,Washington D.C.,Chevy Chase,Fort Reno Park,Parks,38.9527375,-77.0787854
 6748,,Washington D.C.,Chevy Chase,Sushiko Chevy Chase,Restaurants,38.9624743,-77.0851134
 6749,,Washington D.C.,Chevy Chase,Clyde's of Chevy Chase,Restaurants,38.962378,-77.086056
@@ -7902,7 +7902,7 @@ ID,,State,County,Business Name,Search Tag,Latitude,Longitude
 7900,,Washington D.C.,Massachusetts Heights,La Alameda Mexican Restaurant,Restaurants,28.2575082,-82.7063949
 7901,,Washington D.C.,Massachusetts Heights,Heros Downtown Subs andand Salads,Restaurants,28.25037,-82.720563
 7902,,Washington D.C.,Massachusetts Heights,Famous Sal's Pizza New Port Richey,Restaurants,28.2575,-82.7063889
-7903,,Washington D.C.,Massachusetts Heights,Colombian Resturant Brisas Del Valle #2,Restaurants,28.2589651,-82.7020225
+7903,,Washington D.C.,Massachusetts Heights,Colombian Resturant Brisas Del Valle 2,Restaurants,28.2589651,-82.7020225
 7904,,Washington D.C.,Massachusetts Heights,Sip- Wine andand Craft Beer Bar and Restaurant,Restaurants,28.2493452,-82.7197398
 7905,,Washington D.C.,Massachusetts Heights,Christina's Restaurant,Restaurants,28.2503329,-82.7180549
 7906,,Washington D.C.,Massachusetts Heights,Jimmy's Restaurant,Restaurants,28.2488409,-82.720026
@@ -9562,7 +9562,7 @@ ID,,State,County,Business Name,Search Tag,Latitude,Longitude
 9560,,Washington D.C.,Woodley Park (Part of the neighborhood is also in Ward 1),Washington,gyms,38.9071923,-77.0368707
 9561,,Washington D.C.,Woodley Park (Part of the neighborhood is also in Ward 1),Ivy City,gyms,38.9147513,-76.9859077
 9562,,Washington D.C.,Barnaby Woods,Chevy Chase Local Park,Parks,38.9801728,-77.0668119
-9563,,Washington D.C.,Barnaby Woods,Rock Creek Park Grove #8,Parks,38.9717191,-77.0411945
+9563,,Washington D.C.,Barnaby Woods,Rock Creek Park Grove 8,Parks,38.9717191,-77.0411945
 9564,,Washington D.C.,Barnaby Woods,Meadowbrook Local Park,Parks,38.9866412,-77.061597
 9565,,Washington D.C.,Barnaby Woods,Rock Creek Park Grove 10,Parks,38.9757995,-77.0406075
 9566,,Washington D.C.,Barnaby Woods,Rock Creek Park Group Picnic Areas,Parks,38.9636111,-77.0472222
@@ -19155,7 +19155,7 @@ ID,,State,County,Business Name,Search Tag,Latitude,Longitude
 19153,,Washington D.C.,Lincoln Heights,Wild Fun,Entertainment,34.0667411,-118.2052751
 19154,,Washington D.C.,Lincoln Heights,Daniels Entertaint Group,Entertainment,34.0691651,-118.2223291
 19155,,Washington D.C.,Lincoln Heights,The office Bar andand Grill,Entertainment,34.0733225,-118.216465
-19156,,Washington D.C.,Lincoln Heights,La Chuperia #1,Entertainment,34.0616234,-118.2133066
+19156,,Washington D.C.,Lincoln Heights,La Chuperia 1,Entertainment,34.0616234,-118.2133066
 19157,,Washington D.C.,Lincoln Heights,Lincoln Heights Senior Center,Entertainment,34.0725679,-118.2146958
 19158,,Washington D.C.,Lincoln Heights,EOLA Restaurant andand Bar,Entertainment,34.0733963,-118.2119313
 19159,,Washington D.C.,Lincoln Heights,Improvisation Dance Festival,Entertainment,34.0649875,-118.2191349
@@ -19190,7 +19190,7 @@ ID,,State,County,Business Name,Search Tag,Latitude,Longitude
 19188,,Washington D.C.,Lincoln Heights,Point Grand View Park,Parks,34.0800693,-118.2284314
 19189,,Washington D.C.,Lincoln Heights,El Huarachito,Restaurants,34.073545,-118.20985
 19190,,Washington D.C.,Lincoln Heights,The Heights Deli andand Bottle Shop,Restaurants,34.0739364,-118.2107585
-19191,,Washington D.C.,Lincoln Heights,La Chuperia #1,Restaurants,34.0616234,-118.2133066
+19191,,Washington D.C.,Lincoln Heights,La Chuperia 1,Restaurants,34.0616234,-118.2133066
 19192,,Washington D.C.,Lincoln Heights,Ave 26 Taco Stand,Restaurants,34.0826703,-118.2168749
 19193,,Washington D.C.,Lincoln Heights,El Camaron Pelado,Restaurants,34.0786946,-118.2148812
 19194,,Washington D.C.,Lincoln Heights,Llamarada,Restaurants,34.0771659,-118.2153405
@@ -19206,7 +19206,7 @@ ID,,State,County,Business Name,Search Tag,Latitude,Longitude
 19204,,Washington D.C.,Lincoln Heights,Kailey's Restaurant,Restaurants,34.0736759,-118.2023713
 19205,,Washington D.C.,Lincoln Heights,Corn Man,Restaurants,34.0733282,-118.2142483
 19206,,Washington D.C.,Lincoln Heights,La Morenita Restaurant,Restaurants,34.0734388,-118.2149357
-19207,,Washington D.C.,Lincoln Heights,King Taco # 8,Restaurants,34.073455,-118.211434
+19207,,Washington D.C.,Lincoln Heights,King Taco  8,Restaurants,34.073455,-118.211434
 19208,,Washington D.C.,Lincoln Heights,Little Rodeo Restaurant,Restaurants,34.0736345,-118.2037224
 19209,,Washington D.C.,Lincoln Heights,LAC + USC Medical Center - General Hospital,Hospitals,34.0597615,-118.2087121
 19210,,Washington D.C.,Lincoln Heights,Alumni Foundation,Hospitals,34.0749813,-118.2027815
@@ -22494,7 +22494,7 @@ ID,,State,County,Business Name,Search Tag,Latitude,Longitude
 22492,,Virginia,Albemarle,Mattress Firm Albemarle,retail stores,35.3421306,-80.1779386
 22493,,Virginia,Albemarle,Farmers Home Furniture,retail stores,35.34283,-80.1705014
 22494,,Virginia,Albemarle,Ingles Markets,retail stores,35.3419681,-80.1719356
-22495,,Virginia,Albemarle,Tobacco Road Outlet #4 - Tobacco and Vapor,retail stores,35.3440506,-80.1696167
+22495,,Virginia,Albemarle,Tobacco Road Outlet 4 - Tobacco and Vapor,retail stores,35.3440506,-80.1696167
 22496,,Virginia,Albemarle,Windstream Retail Store,retail stores,35.3540052,-80.1990572
 22497,,Virginia,Albemarle,Planet Fitness,gyms,35.342984,-80.169266
 22498,,Virginia,Albemarle,Gold's Gym,gyms,35.3727336,-80.1958822
@@ -24535,7 +24535,7 @@ ID,,State,County,Business Name,Search Tag,Latitude,Longitude
 24533,,Virginia,Campbell,Fix Auto Campbell,car repair,37.2780888,-121.9447687
 24534,,Virginia,Campbell,"B andand J Automotive, Repair",car repair,37.273719,-121.9495189
 24535,,Virginia,Campbell,White Oaks Auto Repair,car repair,37.2672513,-121.9476072
-24536,,Virginia,Campbell,#1 Auto Repair and Smog,car repair,37.263428,-121.96118
+24536,,Virginia,Campbell,1 Auto Repair and Smog,car repair,37.263428,-121.96118
 24537,,Virginia,Campbell,Campbell European Motors,car repair,37.2766052,-121.9509165
 24538,,Virginia,Campbell,A2Z Diagnostic andand Auto Repair,car repair,37.2712364,-121.9552431
 24539,,Virginia,Campbell,Motorpool Automotive,car repair,37.2738763,-121.9490822
@@ -24592,7 +24592,7 @@ ID,,State,County,Business Name,Search Tag,Latitude,Longitude
 24590,,Virginia,Campbell,Prime Physique Personal Training,gyms,37.2850685,-121.9793112
 24591,,Virginia,Campbell,Stick Mobility Training Center,gyms,37.2829228,-121.9323258
 24592,,Virginia,Caroline,The Wooden Keg Tavern,Entertainment,40.7137854,-76.1831232
-24593,,Virginia,Caroline,7C Lounge at FOP Lodge #5,Entertainment,40.0989833,-75.0034389
+24593,,Virginia,Caroline,7C Lounge at FOP Lodge 5,Entertainment,40.0989833,-75.0034389
 24594,,Virginia,Caroline,Carolines on Broadway,Entertainment,40.7609949,-73.9840449
 24595,,Virginia,Caroline,Caroline's By The Bay,Entertainment,39.3182012,-74.5874721
 24596,,Virginia,Caroline,HandleBar Cafe andand Bike Shop,Entertainment,39.285084,-76.5964769
@@ -25630,7 +25630,7 @@ ID,,State,County,Business Name,Search Tag,Latitude,Longitude
 25628,,Virginia,Culpeper,The Meadows Public Park,Parks,38.4895383,-77.979063
 25629,,Virginia,Culpeper,Spilman Park,Parks,38.6519647,-77.9337136
 25630,,Virginia,Culpeper,Cedar Mountain Campground,Parks,38.42591,-78.109871
-25631,,Virginia,Culpeper,"Culpeper, #408 Park and Ride",Parks,38.4512837,-77.9839994
+25631,,Virginia,Culpeper,"Culpeper, 408 Park and Ride",Parks,38.4512837,-77.9839994
 25632,,Virginia,Culpeper,Yowell Meadow Park,Parks,38.4753515,-77.9989225
 25633,,Virginia,Culpeper,Sherbeyn's Lawn andand Landscape,Parks,38.4546159,-78.0406255
 25634,,Virginia,Culpeper,Foti's Restaurant,Restaurants,38.4733411,-77.9957692
@@ -28684,7 +28684,7 @@ ID,,State,County,Business Name,Search Tag,Latitude,Longitude
 28682,,Virginia,Highland,Mazzola's Italian Restaurante,Restaurants,40.426698,-75.822596
 28683,,Virginia,Highland,Giannotti's Ristorante,Restaurants,40.4993189,-75.8013722
 28684,,Virginia,Highland,Fleetwood Pizza,Restaurants,40.4531551,-75.8193618
-28685,,Virginia,Highland,Sheetz #256,Restaurants,40.5015351,-75.9639014
+28685,,Virginia,Highland,Sheetz 256,Restaurants,40.5015351,-75.9639014
 28686,,Virginia,Highland,Tony's Italian Restaurant-Pizzeria,Restaurants,40.5038198,-75.7008672
 28687,,Virginia,Highland,Coordinated Health,Hospitals,40.6731881,-75.3658261
 28688,,Virginia,Highland,UPMC Hanover,Hospitals,39.8085683,-76.9829377
@@ -29261,7 +29261,7 @@ ID,,State,County,Business Name,Search Tag,Latitude,Longitude
 29259,,Virginia,King George,Fairview Beach Restaurant andand Crab House,Restaurants,38.3311944,-77.2470935
 29260,,Virginia,King George,Sam’s Pizza andand Subs,Restaurants,38.3283834,-77.2421694
 29261,,Virginia,King George,Jin Express,Restaurants,38.340619,-77.0713991
-29262,,Virginia,King George,Sheetz #573,Restaurants,38.275377,-77.2040477
+29262,,Virginia,King George,Sheetz 573,Restaurants,38.275377,-77.2040477
 29263,,Virginia,King George,Pancho Villa Mexican Restaurant,Restaurants,38.3498715,-77.0520301
 29264,,Virginia,King George,Bangkok House Thai Cuisine,Restaurants,38.3318069,-77.048006
 29265,,Virginia,King George,Arby's,Restaurants,38.3388897,-77.0788055
@@ -29409,7 +29409,7 @@ ID,,State,County,Business Name,Search Tag,Latitude,Longitude
 29407,,Virginia,King William,Riverside Tappahannock Hospital: Edwards Monica P MD,Doctors offices,37.9009598,-76.8788577
 29408,,Virginia,King William,Cleary Anastasia MD,Doctors offices,37.8965823,-76.8756854
 29409,,Virginia,King William,"Dr. William Waschler, MD",Doctors offices,37.5148762,-77.1977141
-29410,,Virginia,King William,Dixon's Automotive Repair #1,car repair,37.7321666,-77.1384679
+29410,,Virginia,King William,Dixon's Automotive Repair 1,car repair,37.7321666,-77.1384679
 29411,,Virginia,King William,Stanley's Shop Auto andand Equipment Repair,car repair,37.7377256,-77.1350255
 29412,,Virginia,King William,Rayz Way Express,car repair,37.717752,-77.0725682
 29413,,Virginia,King William,JPG Auto Sales andand Service LLC,car repair,37.7162265,-77.0736362
@@ -29543,7 +29543,7 @@ ID,,State,County,Business Name,Search Tag,Latitude,Longitude
 29541,,Virginia,Lancaster,Center for Health at Granite Run,Hospitals,40.0776741,-76.3326662
 29542,,Virginia,Lancaster,Lancaster Behavioral Health Hospital,Hospitals,40.0495784,-76.3149308
 29543,,Virginia,Lancaster,Lancaster General Purchasing,Hospitals,40.047448,-76.3050822
-29544,,Virginia,Lancaster,Suite #21,Hospitals,40.0656708,-76.3547239
+29544,,Virginia,Lancaster,Suite 21,Hospitals,40.0656708,-76.3547239
 29545,,Virginia,Lancaster,Women andand Babies Hospital,Hospitals,40.0647741,-76.3507788
 29546,,Virginia,Lancaster,Suzanne H. Arnold Center for Breast Health,Hospitals,40.0654743,-76.3539052
 29547,,Virginia,Lancaster,LG Health Physicians Family Medicine Downtown,Doctors offices,40.0473081,-76.3059255
@@ -30638,12 +30638,12 @@ ID,,State,County,Business Name,Search Tag,Latitude,Longitude
 30636,,Virginia,Mecklenburg,Lionel Retail Store,retail stores,35.3692188,-80.7238346
 30637,,Virginia,Mecklenburg,SCORE Retail Lounge andand Sweets Bar,retail stores,35.2253544,-80.8461468
 30638,,Virginia,Mecklenburg,HandandL Retail,retail stores,35.2210132,-80.91641
-30639,,Virginia,Mecklenburg,Mecklenburg County ABC Store #02,retail stores,35.0823775,-80.7313445
+30639,,Virginia,Mecklenburg,Mecklenburg County ABC Store 02,retail stores,35.0823775,-80.7313445
 30640,,Virginia,Mecklenburg,Industrial Retail Group,retail stores,35.249737,-80.827808
-30641,,Virginia,Mecklenburg,Mecklenburg County ABC Store #17,retail stores,35.4827036,-80.8730215
-30642,,Virginia,Mecklenburg,Mecklenburg County ABC Store #08,retail stores,35.162675,-80.74115
+30641,,Virginia,Mecklenburg,Mecklenburg County ABC Store 17,retail stores,35.4827036,-80.8730215
+30642,,Virginia,Mecklenburg,Mecklenburg County ABC Store 08,retail stores,35.162675,-80.74115
 30643,,Virginia,Mecklenburg,Verizon Authorized Retailer – Victra,retail stores,35.1842923,-80.7586688
-30644,,Virginia,Mecklenburg,Mecklenburg County ABC Store #12,retail stores,35.1539228,-80.8251234
+30644,,Virginia,Mecklenburg,Mecklenburg County ABC Store 12,retail stores,35.1539228,-80.8251234
 30645,,Virginia,Mecklenburg,Verizon Authorized Retailer — Cellular Sales,retail stores,35.1638759,-80.8843222
 30646,,Virginia,Mecklenburg,Cricket Wireless Authorized Retailer,retail stores,35.300148,-80.80224
 30647,,Virginia,Mecklenburg,Cricket Wireless Authorized Retailer,retail stores,35.146025,-80.929329
@@ -30912,7 +30912,7 @@ ID,,State,County,Business Name,Search Tag,Latitude,Longitude
 30910,,Virginia,Montgomery,Doctor Long,Hospitals,32.3785888,-86.1715598
 30911,,Virginia,Montgomery,Montgomery Cardiovascular Associates- Winton M. Blount Loop,Hospitals,32.3779804,-86.1721444
 30912,,Virginia,Montgomery,BMCE,Hospitals,32.3279556,-86.2777512
-30913,,Virginia,Montgomery,Fire Station #3,Hospitals,32.3565168,-86.2418099
+30913,,Virginia,Montgomery,Fire Station 3,Hospitals,32.3565168,-86.2418099
 30914,,Virginia,Montgomery,VA Medical Center-Montgomery,Hospitals,32.3773329,-86.2462271
 30915,,Virginia,Montgomery,Prattville Baptist Hospital,Hospitals,32.4639954,-86.451837
 30916,,Virginia,Montgomery,Your Doctor's office PC,Doctors offices,32.338191,-86.149358
@@ -32632,7 +32632,7 @@ ID,,State,County,Business Name,Search Tag,Latitude,Longitude
 32630,,Virginia,Prince George,Snipper's Hair Care,Entertainment,37.2226907,-77.2994021
 32631,,Virginia,Prince George,Best Nails,Entertainment,37.2572578,-77.2830053
 32632,,Virginia,Prince George,Tilted Kilt,Entertainment,37.249862,-77.365237
-32633,,Virginia,Prince George,Field #7,Entertainment,37.2308514,-77.2881388
+32633,,Virginia,Prince George,Field 7,Entertainment,37.2308514,-77.2881388
 32634,,Virginia,Prince George,Prince George Central Wellness Center,Entertainment,37.1591949,-77.2748947
 32635,,Virginia,Prince George,Jerry's Burger Spot,Entertainment,37.2602524,-77.3222905
 32636,,Virginia,Prince George,Swaders Sports Park,Entertainment,37.2479408,-77.371068
@@ -32840,7 +32840,7 @@ ID,,State,County,Business Name,Search Tag,Latitude,Longitude
 32838,,Virginia,Prince William,Emergency Hospital,Hospitals,38.6367693,-77.2856955
 32839,,Virginia,Prince William,Sentara Hospital Medicine Physicians,Hospitals,38.6374562,-77.2862766
 32840,,Virginia,Prince William,Novant Health UVA Haymarket Medical Center,Hospitals,38.8208595,-77.6422741
-32841,,Virginia,Prince William,Dr Office #203,Hospitals,38.7678851,-77.4892913
+32841,,Virginia,Prince William,Dr Office 203,Hospitals,38.7678851,-77.4892913
 32842,,Virginia,Prince William,Novant Health UVA Prince William Medical Center: Emergency Room,Hospitals,38.7667454,-77.4881631
 32843,,Virginia,Prince William,Rehab center Westminister of Lake Ridge,Hospitals,38.6753447,-77.2729277
 32844,,Virginia,Prince William,Inova Health System,Hospitals,38.9192806,-77.7156441
@@ -35549,11 +35549,11 @@ ID,,State,County,Business Name,Search Tag,Latitude,Longitude
 35547,,Virginia,Westmoreland,Jerry Smith andand Sons Car Care Center,car repair,43.0958064,-75.3994061
 35548,,Virginia,Westmoreland,Westmoreland Antique Mall,retail stores,36.5613,-86.248023
 35549,,Virginia,Westmoreland,Dollar General,retail stores,36.5538378,-86.2383758
-35550,,Virginia,Westmoreland,Sudden Service #73,retail stores,36.5534348,-86.2363887
+35550,,Virginia,Westmoreland,Sudden Service 73,retail stores,36.5534348,-86.2363887
 35551,,Virginia,Westmoreland,Mike's Foodland,retail stores,36.5547761,-86.2450924
 35552,,Virginia,Westmoreland,Price Less Foods,retail stores,36.5543111,-86.2241876
 35553,,Virginia,Westmoreland,Grandpa's Music andand Grannie's Treasures,retail stores,36.5623029,-86.2474966
-35554,,Virginia,Westmoreland,Sudden Service #55,retail stores,36.5396458,-86.2029072
+35554,,Virginia,Westmoreland,Sudden Service 55,retail stores,36.5396458,-86.2029072
 35555,,Virginia,Westmoreland,LibertyX Bitcoin ATM,retail stores,36.6102,-86.268189
 35556,,Virginia,Westmoreland,Verizon Authorized Retailer - Russell Cellular,retail stores,36.5226834,-86.0399733
 35557,,Virginia,Westmoreland,Gabe's,retail stores,36.3787198,-86.4640981
