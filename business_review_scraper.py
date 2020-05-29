@@ -48,12 +48,12 @@ def search(start, end, df, dicToAdd):
         
     for i in range(len(listNames)):
        # print(i)
-        info = (search_location(listNames[i], "AIzaSyD8Iaqb9uVapwwo8C2-nkHKwXDuys6Ql7U", listLat[i], listLong[i])) 
+        info = (search_location(listNames[i], key, listLat[i], listLong[i])) 
         j = 0
         redoCounter = 0
         while(j < len(info["results"])):
             try:
-                moreInfo = get_business_reviews(info["results"][j]["place_id"], "AIzaSyD8Iaqb9uVapwwo8C2-nkHKwXDuys6Ql7U")
+                moreInfo = get_business_reviews(info["results"][j]["place_id"], key)
                 listJSON.append(moreInfo) #puts all the review json files into a list
                 j += 1
             except (TimeoutError, MemoryError, OSError, SystemError, RuntimeError, requests.exceptions.ConnectionError, requests.exceptions.Timeout) as e:
@@ -78,16 +78,16 @@ def search(start, end, df, dicToAdd):
     dicToAdd = {"Business ID": listFormattedID, "Reviews": listReview}
 
 try:
-    df = pd.read_csv(r"C:\Users\novac\Documents\cvt\Businesses_Output.csv").head(10) #loads csv of compiled businesses
+    df = pd.read_csv(path).head(10) #loads csv of compiled businesses
 except IOError:
     print("Error Opening File")
     exit(0)
 
 numPartitions = int(input("How many partitions for the csv?: "))
 numCols = int(len(df.index)/numPartitions) 
-now = datetime.now() 
-current_time = now.strftime("%H:%M:%S")
-print(current_time)
+#now = datetime.now() 
+#current_time = now.strftime("%H:%M:%S")
+#print(current_time)
 listCSV = []
 listStarting = []
 listEnding = []
@@ -101,10 +101,10 @@ for i in range(numPartitions):
         listEnding.append(len(df.index)) #final split takes till eof
     listDics.append(dicToAppend)
 threads = []
+
 for i in range(len(listStarting)):
     threads.append(threading.Thread(target = search, args = (listStarting[i], listEnding[i], df, listDics[i])))
-for thread in threads:
-    thread.start()
+    threads[i].start()
 for thread in threads:
     thread.join() 
 now = datetime.now()
@@ -112,11 +112,11 @@ current_time = now.strftime("%H:%M:%S")
 print("Done with writing at ", current_time)
 listAllID = []
 listAllReviews = []
-for dic in listDics: #appends all contents in smaller csv files into final big one
-    print(dic)
-   # for i in range(len(dic["Business ID"])):
-     #   listAllID.append(dic["Business ID"][i])
-      #  listAllReviews.append(dic["Reviews"][i])
+for dic in listDics: #appends all contents in dictionaries into final lists for df formatting
+   # print(dic)
+    for i in range(len(dic["Business ID"])):
+        listAllID.append(dic["Business ID"][i])
+        listAllReviews.append(dic["Reviews"][i])
 finalFormat = {"Business ID": listAllID, "Reviews": listAllReviews}
 finalCSV = pd.DataFrame(finalFormat)
 finalCSV.to_csv("collective_business_reviews.csv", index = False)
