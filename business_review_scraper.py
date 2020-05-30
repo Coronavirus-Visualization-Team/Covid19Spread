@@ -5,6 +5,28 @@ import json
 import threading
 import os 
 
+try:
+    df = pd.read_csv(path) #loads csv of compiled businesses
+except IOError:
+    print("Error Opening File")
+    exit(0)
+
+numPartitions = int(input("How many partitions for the csv?: "))
+numCols = int(len(df.index)/numPartitions) 
+listCSV = []
+listStarting = []
+listEnding = []
+listDics = []
+for i in range(numPartitions):
+    listStarting.append(int(i * numCols))
+    dicToAppend = {}
+    if(not i == (numPartitions - 1)):
+        listEnding.append((i + 1) * numCols) #splits up csv
+    else:
+        listEnding.append(len(df.index)) #final split takes till eof
+    listDics.append(dicToAppend)
+threads = []
+
 #this method searches for all the businesses of the passed in name within a certain radius of the coordinates
 #@param name the name of the location
 #@param key the api key
@@ -31,7 +53,7 @@ def get_business_reviews(place_id, key):
     output = json.loads(content)
     return output
 
-def search(start, end, df, dicToAdd):
+def search(start, end, df, index):
     listFormattedID = [] #correct ID corresponding to review
     listNames = []
     listLat = []
@@ -75,45 +97,16 @@ def search(start, end, df, dicToAdd):
                     listReview.append(review)
                     listFormattedID.append(ID)
                     
-    dicToAdd = {"Business ID": listFormattedID, "Reviews": listReview}
-
-try:
-    df = pd.read_csv(path).head(10) #loads csv of compiled businesses
-except IOError:
-    print("Error Opening File")
-    exit(0)
-
-numPartitions = int(input("How many partitions for the csv?: "))
-numCols = int(len(df.index)/numPartitions) 
-#now = datetime.now() 
-#current_time = now.strftime("%H:%M:%S")
-#print(current_time)
-listCSV = []
-listStarting = []
-listEnding = []
-listDics = []
-for i in range(numPartitions):
-    listStarting.append(int(i * numCols))
-    dicToAppend = {}
-    if(not i == (numPartitions - 1)):
-        listEnding.append((i + 1) * numCols) #splits up csv
-    else:
-        listEnding.append(len(df.index)) #final split takes till eof
-    listDics.append(dicToAppend)
-threads = []
+    listDics[index] = {"Business ID": listFormattedID, "Reviews": listReview}
 
 for i in range(len(listStarting)):
-    threads.append(threading.Thread(target = search, args = (listStarting[i], listEnding[i], df, listDics[i])))
+    threads.append(threading.Thread(target = search, args = (listStarting[i], listEnding[i], df, i)))
     threads[i].start()
 for thread in threads:
     thread.join() 
-now = datetime.now()
-current_time = now.strftime("%H:%M:%S")
-print("Done with writing at ", current_time)
 listAllID = []
 listAllReviews = []
-for dic in listDics: #appends all contents in dictionaries into final lists for df formatting
-   # print(dic)
+for dic in listDics: #appends all contents in dictionaries into final lists for df 
     for i in range(len(dic["Business ID"])):
         listAllID.append(dic["Business ID"][i])
         listAllReviews.append(dic["Reviews"][i])
